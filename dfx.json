@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "traza_backend": {
+      "main": "src/traza_backend/main.mo",
+      "type": "motoko"
+    },
+    "traza_frontend": {
+      "dependencies": [
+        "traza_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/traza_frontend/src/index.html"
+      },
+      "source": [
+        "src/traza_frontend/assets",
+        "dist/traza_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
